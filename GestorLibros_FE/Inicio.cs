@@ -16,5 +16,11 @@ namespace GestorLibros_FE
         {
             InitializeComponent();
         }
+
+        private void btnAgregar_Click(object sender, EventArgs e)
+        {
+            AgregarLibro agregarLibro = new AgregarLibro();
+            agregarLibro.ShowDialog();
+        }
     }
 }

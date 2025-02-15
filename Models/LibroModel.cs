@@ -11,7 +11,7 @@ namespace Models
         public string Titulo { get; set; }
         public string Autor { get; set; }
         public int Genero { get; set; }
-        public int FechaPublicacion { get; set; }
+        public DateTime FechaPublicacion { get; set; }
         public string Editorial { get; set; }
         public string Estado { get; set; }
         public decimal Precio { get; set; }
