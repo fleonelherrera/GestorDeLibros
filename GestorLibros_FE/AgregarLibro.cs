@@ -7,12 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Controllers;
 using Models;
 
 namespace GestorLibros_FE
 {
     public partial class AgregarLibro : Form
     {
+        LibroController libroController = new LibroController();
+
         public AgregarLibro()
         {
             InitializeComponent();
@@ -41,6 +44,9 @@ namespace GestorLibros_FE
             libroAAgregar.Estado = AsignarEstado(cboEstado.SelectedIndex);
             libroAAgregar.Precio = nupPrecio.Value;
             libroAAgregar.UrlImagen = txtUrlImagen.Text;
+
+            libroController.AgregarLibro(libroAAgregar);
+            this.Close();
 
         }
 
